@@ -1,0 +1,16 @@
+.env
+config.local.php
+storage/setup.lock
+storage/logs/*
+!storage/logs/.gitkeep
+storage/cache/*
+!storage/cache/.gitkeep
+storage/uploads/products/*
+!storage/uploads/products/.gitkeep
+public/uploads/products/*
+!public/uploads/products/.gitkeep
+screenshots/
+*.bak
+*.log
+.DS_Store
+Thumbs.db

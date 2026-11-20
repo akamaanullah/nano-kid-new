@@ -1,0 +1,18 @@
+# Nano Kids Wholesale — send traffic into public/ and hide application folders.
+Options -Indexes
+<IfModule mod_authz_core.c>
+  <FilesMatch "(^\.env|\.env\.|composer\.(json|lock)$|\.(sql|md|bak|log|ini)$)">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(app|config|database|storage|tests|views|vendor)(/|$) - [F,L]
+  RewriteRule ^setup\.php$ - [L]
+  RewriteRule ^(config\.php|config\.local\.php|config\.example\.php)$ - [F,L]
+
+  # Already inside public — do not loop
+  RewriteCond %{REQUEST_URI} !/public/
+  RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
