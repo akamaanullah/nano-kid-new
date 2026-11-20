@@ -193,7 +193,6 @@ function mobileMenuHTML() {
       <li><a href="catalog.html">Catalogue</a></li>
       <li><button class="mm-acc-btn" aria-expanded="false">Shop by ${ico('plus')}</button>
         <div class="mm-sub"><div class="mm-sub-inner">${sub('By age', AGES, 'age')}${sub('By season', SEASONS, 'season')}${sub('By category', CATS, 'cat')}</div></div></li>
-      <li><a href="catalog.html?age=adults">Adults</a></li>
       <li><a href="private-label.html" style="color:var(--accent-text)">Private label</a></li>
       <li><a href="apply.html">Become a dealer</a></li>
       <li><a href="about.html">About</a></li>
@@ -215,8 +214,7 @@ function headerHTML() {
       <button class="icon-btn menu-toggle" data-open-menu aria-label="Open menu">${ico('menu')}</button>
       <ul class="main-nav">
         <li class="has-mega"><a href="catalog.html" class="${act('catalog.html')}">Catalogue</a>${megaHTML()}</li>
-        <li><a href="catalog.html?age=adults">Adults</a></li>
-        <li><a class="nav-accent ${act('private-label.html')}" href="private-label.html">Private Label</a></li>
+          <li><a class="nav-accent ${act('private-label.html')}" href="private-label.html">Private Label</a></li>
         <li><a href="apply.html" class="${act('apply.html')}">Become a dealer</a></li>
         <li><a href="about.html" class="${act('about.html')}">About</a></li>
       </ul>
@@ -241,10 +239,10 @@ function footerHTML() {
   const li = (list, p) => list.map(x => `<li><a href="catalog.html?${p}=${x.key}">${x.label}</a></li>`).join('');
   return `<footer class="site-footer"><div class="footer-accent" aria-hidden="true"></div><div class="wrap">
     <div class="footer-grid">
-      <div class="footer-brand">${logoHTML}<p>Wholesale clothing for retailers, shops and distributors — from newborn to adult, with per-style MOQs, volume tiers and private label programmes.</p>
+      <div class="footer-brand">${logoHTML}<p>Wholesale clothing for retailers, shops and distributors — baby and kids programmes from newborn to 14, with per-style MOQs, volume tiers and private label.</p>
         <div class="socials"><a href="#" aria-label="Instagram">${ico('insta')}</a><a href="#" aria-label="Facebook">${ico('fb')}</a><a href="#" aria-label="WhatsApp">${ico('chat')}</a></div></div>
       <div><h5>Catalogue</h5><ul><li><a href="catalog.html">All styles</a></li>${li(AGES, 'age')}<li><a href="private-label.html">Private label</a></li></ul></div>
-      <div><h5>Programmes</h5><ul>${li(SEASONS, 'season')}<li><a href="catalog.html?cat=uniforms">Uniforms</a></li></ul></div>
+      <div><h5>Programmes</h5><ul>${li(SEASONS, 'season')}</ul></div>
       <div><h5>Trade</h5><ul><li><a href="apply.html">Become a dealer</a></li><li><a href="login.html">Trade login</a></li><li><a href="faq.html">MOQ &amp; terms</a></li><li><a href="quote.html">Request a quote</a></li><li><a href="contact.html">Contact trade</a></li></ul></div>
       <div class="footer-contact"><h5>Trade desk</h5><ul>
         <li>${ico('pin')}<span>${TRADE_CONTACT.warehouse}</span></li>
@@ -474,14 +472,14 @@ function initHome() {
   if (feat) feat.innerHTML = PRODUCTS.filter(p => p.tag === 'Bestseller' || p.tag === 'Core' || p.tag === 'New').slice(0, 8).map(productCard).join('');
   const ageEl = $('#ageGrid');
   if (ageEl) {
-    const thumbs = { newborn: CAMPAIGN.baby, baby: CAMPAIGN.pyjama, kids: CAMPAIGN.hoodie, junior: CAMPAIGN.jeans, adults: CAMPAIGN.trio };
+    const thumbs = { newborn: CAMPAIGN.baby, baby: CAMPAIGN.pyjama, kids: CAMPAIGN.hoodie, junior: CAMPAIGN.jeans };
     ageEl.innerHTML = AGES.map((a, i) => `<a class="age-card" href="catalog.html?age=${a.key}" data-reveal style="--d:${i * .08}s">
       <img src="${pex(thumbs[a.key] || CAMPAIGN.knit, 800)}" alt="${a.label} clothing" loading="lazy">
       <div class="meta"><div><span class="num">${a.range}</span><h3>${a.label}</h3></div><span class="arrow">${ico('arrow')}</span></div></a>`).join('');
   }
   const catEl = $('#catRow');
   if (catEl) {
-    const thumbs = { dresses: CAMPAIGN.festive, tops: CAMPAIGN.cube, trousers: CAMPAIGN.jeans, sets: CAMPAIGN.everyday, outerwear: CAMPAIGN.knit, nightwear: CAMPAIGN.pyjama, ethnic: CAMPAIGN.formal, accessories: CAMPAIGN.baby, uniforms: CAMPAIGN.trio };
+    const thumbs = { dresses: CAMPAIGN.festive, tops: CAMPAIGN.cube, trousers: CAMPAIGN.jeans, sets: CAMPAIGN.everyday, outerwear: CAMPAIGN.knit, nightwear: CAMPAIGN.pyjama, ethnic: CAMPAIGN.formal, accessories: CAMPAIGN.baby };
     catEl.innerHTML = CATS.map((c, i) => `<a class="cat-item" href="catalog.html?cat=${c.key}" data-reveal style="--d:${i * .04}s">
       <span class="ring"><img src="${pex(thumbs[c.key] || CAMPAIGN.knit, 400)}" alt=""></span><span>${c.label}</span></a>`).join('');
   }

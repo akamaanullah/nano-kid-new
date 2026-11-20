@@ -42,8 +42,7 @@ const AGES = [
   { key:'newborn', label:'Newborn', range:'0 – 12 months', sizes:['0-3m','3-6m','6-12m'] },
   { key:'baby',    label:'Baby',    range:'1 – 3 years',   sizes:['12-18m','18-24m','2-3y'] },
   { key:'kids',    label:'Kids',    range:'4 – 8 years',   sizes:['4-5y','6-7y','7-8y'] },
-  { key:'junior',  label:'Junior',  range:'9 – 14 years',  sizes:['9-10y','11-12y','13-14y'] },
-  { key:'adults',  label:'Adults',  range:'S – XXL',       sizes:['S','M','L','XL','XXL'] }
+  { key:'junior',  label:'Junior',  range:'9 – 14 years',  sizes:['9-10y','11-12y','13-14y'] }
 ];
 const SEASONS = [
   { key:'summer',  label:'Summer',         note:'Jerseys, linens and lawn for warm floors and long days.' },
@@ -60,8 +59,7 @@ const CATS = [
   { key:'outerwear',   label:'Outerwear' },
   { key:'nightwear',   label:'Nightwear' },
   { key:'ethnic',      label:'Ethnic Wear' },
-  { key:'accessories', label:'Accessories' },
-  { key:'uniforms',    label:'Uniforms & Staff' }
+  { key:'accessories', label:'Accessories' }
 ];
 const COLORS = {
   ivory:{n:'Ivory',h:'#F1EADD'}, sand:{n:'Sand',h:'#D8C6A5'}, terracotta:{n:'Terracotta',h:'#B8654A'},
@@ -237,49 +235,7 @@ const PRODUCTS = [
   P({ sku:'NKW-DRS-015', name:'Pleated Pinafore', category:'dresses', age_group:'kids', season:'winter',
       fabric:'Cotton twill', gsm:200, moq:24, base_price:1890, lead_time_days:10,
       colors:['navy','olive'], photo:'cam', fy:.45,
-      description:'Twill pinafore with a pleated skirt and adjustable straps. Layers over tees through the year.' }),
-
-  /* Adults — same house, trade programme */
-  P({ sku:'NKW-ADT-101', name:'Adult Heavyweight Tee', category:'tops', age_group:'adults', season:'core',
-      fabric:'Combed cotton jersey', gsm:220, moq:36, base_price:790, lead_time_days:7,
-      colors:['ivory','navy','black','terracotta'], photo:'flattee', tag:'Core', pack_units:6, pack_ratio:'S-M-L-XL', fy:.3,
-      description:'220 gsm combed cotton tee, retail-ready unisex fit. Suggested pack of 6: S-M-L-XL. A shop-floor basic.' }),
-  P({ sku:'NKW-ADT-110', name:'Adult Oversized Hoodie', category:'outerwear', age_group:'adults', season:'winter',
-      fabric:'Brushed cotton fleece', gsm:360, moq:24, base_price:2190, lead_time_days:12,
-      colors:['charcoal','navy','sand','brick'], photo:'sweat', tag:'Bestseller', fy:.4,
-      description:'Oversized hoodie in 360 gsm brushed fleece with a lined hood and kangaroo pocket.' }),
-  P({ sku:'NKW-ADT-118', name:'Adult Oxford Shirt', category:'tops', age_group:'adults', season:'core',
-      fabric:'Cotton oxford', gsm:140, moq:24, base_price:1890, lead_time_days:10,
-      colors:['ivory','sky','navy'], photo:'hang', fy:.4,
-      description:'Button-down oxford in a breathable 140 gsm weave. A year-round adult shirt programme.' }),
-  P({ sku:'NKW-ADT-124', name:'Adult Crewneck Sweatshirt', category:'tops', age_group:'adults', season:'winter',
-      fabric:'Loopback cotton fleece', gsm:380, moq:24, base_price:1990, lead_time_days:12,
-      colors:['ivory','navy','olive','brick'], photo:'whisper', fy:.45,
-      description:'Classic 380 gsm crewneck, double-stitched. Pairs with the adult jogger as a set programme.' }),
-  P({ sku:'NKW-ADT-131', name:'Adult Linen Camp Shirt', category:'tops', age_group:'adults', season:'summer',
-      fabric:'Linen-cotton blend', gsm:150, moq:12, base_price:2290, lead_time_days:11,
-      colors:['sand','sage','ivory'], photo:'read', tag:'New', fy:.35,
-      description:'Camp-collar linen shirt. A lower-MOQ summer drop for boutiques and concept stores.' }),
-  P({ sku:'NKW-ADT-140', name:'Adult Jogger Trousers', category:'trousers', age_group:'adults', season:'core',
-      fabric:'Cotton fleece', gsm:320, moq:24, base_price:1690, lead_time_days:10,
-      colors:['charcoal','navy','sand'], photo:'skate', fy:.7,
-      description:'Tapered fleece jogger with a cuffed hem and side pockets. Built to sit beside the adult crewneck.' }),
-  P({ sku:'NKW-ADT-148', name:'Adult Pique Polo', category:'tops', age_group:'adults', season:'core',
-      fabric:'Cotton pique', gsm:200, moq:36, base_price:1290, lead_time_days:8,
-      colors:['navy','ivory','olive','black'], photo:'red', tag:'Core', pack_units:6, pack_ratio:'S-M-L-XL', fy:.3,
-      description:'Classic pique polo with a taped neck and two-button placket. Suggested pack of 6: S-M-L-XL.' }),
-  P({ sku:'NKW-UNI-201', name:'Staff Uniform Polo', category:'uniforms', age_group:'adults', season:'core',
-      fabric:'Cotton pique, easy-care', gsm:200, moq:50, base_price:990, lead_time_days:14, stock_status:'made_to_order',
-      colors:['navy','black','ivory'], photo:'dshirt', tag:'Private label', pack_units:6, pack_ratio:'S-M-L-XL', fy:.4,
-      description:'Easy-care staff polo, ready for a woven label or embroidery. MOQ 50. Pack of 6: S-M-L-XL.' }),
-  P({ sku:'NKW-ADT-155', name:'Adult Jersey Shorts', category:'trousers', age_group:'adults', season:'summer',
-      fabric:'Cotton jersey', gsm:240, moq:36, base_price:890, lead_time_days:7,
-      colors:['navy','charcoal','sand'], photo:'sprink', fy:.75,
-      description:'Above-knee jersey shorts with a drawstring. A summer adult volume style.' }),
-  P({ sku:'NKW-ADT-162', name:'Adult Windbreaker', category:'outerwear', age_group:'adults', season:'spring',
-      fabric:'Ripstop nylon, PU coating', gsm:110, moq:12, base_price:2790, lead_time_days:16, stock_status:'limited',
-      colors:['navy','olive','black'], photo:'rain', fy:.4,
-      description:'Packable ripstop windbreaker with a hood and elastic cuffs. A tighter-MOQ seasonal outer layer.' })
+      description:'Twill pinafore with a pleated skirt and adjustable straps. Layers over tees through the year.' })
 ];
 
 const FABRICS = [...new Set(PRODUCTS.map(p => p.fabric))].sort();
@@ -293,8 +249,7 @@ const SIZE_GUIDE = {
   newborn: [['0 – 3 m','56–62','41','40'],['3 – 6 m','62–68','43','42'],['6 – 12 m','68–80','46','44']],
   baby:    [['12 – 18 m','80–86','48','46'],['18 – 24 m','86–92','49','47'],['2 – 3 y','92–98','52','49']],
   kids:    [['4 – 5 y','104–110','56','52'],['6 – 7 y','116–122','60','54'],['7 – 8 y','122–128','63','56']],
-  junior:  [['9 – 10 y','134–140','68','59'],['11 – 12 y','146–152','74','63'],['13 – 14 y','158–164','80','67']],
-  adults:  [['S','168–174','90–94','74–78'],['M','174–180','96–100','80–84'],['L','180–186','102–106','86–90'],['XL','186–192','108–112','92–96'],['XXL','192–198','114–118','98–102']]
+  junior:  [['9 – 10 y','134–140','68','59'],['11 – 12 y','146–152','74','63'],['13 – 14 y','158–164','80','67']]
 };
 
 const ACCOUNT_MANAGER = {
