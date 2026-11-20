@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Become a dealer — Nano Kids Wholesale</title>
+<meta name="description" content="Apply for a Nano Kids wholesale dealership. Trade pricing, NTN invoicing and credit for approved retailers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="apply">
+<main id="main">
+
+  <section class="section">
+    <div class="wrap auth-layout">
+      <div>
+        <span class="eyebrow">Dealership</span>
+        <h1>Apply to trade with <em>Nano Kids.<svg class="squiggle" viewBox="0 0 140 14" fill="none" aria-hidden="true"><path d="M2 9c18-8 28 6 48 0s28-8 48 1 22 7 40-2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></em></h1>
+        <p class="lead">Registered retailers, shops and distributors can apply for wholesale pricing, invoices against your NTN, and 14-day credit once the account is approved.</p>
+        <ul class="plain-list">
+          <li>Per-style MOQs, set in the admin — never a surprise site-wide number</li>
+          <li>Volume tiers up to 22% off</li>
+          <li>A named account manager after approval</li>
+        </ul>
+      </div>
+      <form class="auth-card" id="applyForm">
+        <label class="field">Business name<input type="text" name="business" required></label>
+        <label class="field">Contact person<input type="text" name="contact" required></label>
+        <label class="field">Work email<input type="email" name="email" required></label>
+        <label class="field">Phone<input type="tel" name="phone" required></label>
+        <label class="field">NTN / registration number<input type="text" name="ntn" required></label>
+        <label class="field">City<input type="text" name="city" required></label>
+        <label class="field">Type of shop
+          <select name="type" required>
+            <option value="">Select</option>
+            <option>Independent boutique</option>
+            <option>Multi-store retailer</option>
+            <option>Department store</option>
+            <option>Distributor / wholesaler</option>
+            <option>Online-only retailer</option>
+          </select>
+        </label>
+        <label class="field">Expected monthly volume
+          <select name="volume" required>
+            <option value="">Select</option>
+            <option>Under 200 pieces</option>
+            <option>200–500 pieces</option>
+            <option>500–1,500 pieces</option>
+            <option>1,500+ pieces</option>
+          </select>
+        </label>
+        <button class="btn btn--pill btn--block" type="submit">Submit application</button>
+        <p class="news-note">This is a demonstration form. In production it would be reviewed by the trade desk.</p>
+      </form>
+      <div id="applySuccess" class="success-panel" hidden>
+        <span class="hero-pill">Received</span>
+        <h2>Thank you — your application is <em>in review.</em></h2>
+        <p class="lead">The trade desk will be in touch, usually within two working days. You can already log in with the email you provided to follow the account.</p>
+        <a class="btn btn--pill" href="dashboard.html">Go to your dashboard</a>
+        <a class="btn btn--pill btn--ghost" href="catalog.html">Browse the catalogue</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

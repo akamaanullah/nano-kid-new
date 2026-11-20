@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trade login — Nano Kids Wholesale</title>
+<meta name="description" content="Sign in to your Nano Kids wholesale dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<main id="main">
+
+  <section class="section">
+    <div class="wrap auth-layout auth-layout--narrow">
+      <div>
+        <span class="eyebrow">Trade login</span>
+        <h1>Welcome <em>back.<svg class="squiggle" viewBox="0 0 140 14" fill="none" aria-hidden="true"><path d="M2 9c18-8 28 6 48 0s28-8 48 1 22 7 40-2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></em></h1>
+        <p class="lead">Sign in to follow quotes, invoices and reorders. For this prototype, any email and a password of 4 or more characters will open the demo dashboard.</p>
+      </div>
+      <form class="auth-card" id="loginForm">
+        <label class="field">Work email<input type="email" id="loginEmail" required autocomplete="username"></label>
+        <label class="field">Password<input type="password" id="loginPass" required minlength="4" autocomplete="current-password"></label>
+        <button class="btn btn--pill btn--block" type="submit">Sign in</button>
+        <p class="news-note">No account yet? <a href="apply.html">Apply to become a dealer</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
